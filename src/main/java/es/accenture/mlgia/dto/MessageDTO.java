@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class MessageDTO {
+public class MessageDTO implements Cloneable {
  
     private String messageIn;
     
@@ -26,5 +26,9 @@ public class MessageDTO {
     private Date date;
     
     private String conversationId;
+    
+	public MessageDTO clone() throws CloneNotSupportedException {
+		return (MessageDTO) super.clone();
+	}
     
 }
