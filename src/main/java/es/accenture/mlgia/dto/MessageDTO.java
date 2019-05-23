@@ -1,6 +1,7 @@
 package es.accenture.mlgia.dto;
 
 import java.sql.Date;
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,6 +27,8 @@ public class MessageDTO implements Cloneable {
     private Date date;
     
     private String conversationId;
+    
+    private List<String> options;
     
 	public MessageDTO clone() throws CloneNotSupportedException {
 		return (MessageDTO) super.clone();
